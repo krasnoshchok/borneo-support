@@ -1,0 +1,131 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --border: #e3e6ea;
+  --text: #1c1f23;
+  --muted: #5c6570;
+  --accent: #1f6f5c;
+  --accent-soft: #edf5f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15181c;
+    --surface: #1d2126;
+    --border: #2d333a;
+    --text: #e8eaed;
+    --muted: #9aa4af;
+    --accent: #5fbfa4;
+    --accent-soft: #1b2a27;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+header { margin-bottom: 2.5rem; }
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.mark span[aria-hidden] { font-size: 1.7rem; }
+
+.tagline {
+  margin: .5rem 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+h1 {
+  font-size: 1.85rem;
+  letter-spacing: -.02em;
+  margin: 0 0 .4rem;
+}
+
+h2 {
+  font-size: 1.16rem;
+  letter-spacing: -.01em;
+  margin: 2.4rem 0 .7rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+
+h2:first-of-type { border-top: 0; padding-top: 0; }
+
+h3 {
+  font-size: 1rem;
+  margin: 1.5rem 0 .35rem;
+}
+
+p, li { color: var(--text); }
+p { margin: 0 0 1rem; }
+ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+li { margin-bottom: .5rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+.eyebrow {
+  color: var(--muted);
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin: 0 0 1.8rem;
+}
+
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.15rem 1.3rem;
+  margin: 0 0 2rem;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.15rem 1.3rem;
+  margin: 0 0 1rem;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+.contact {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+footer p { color: var(--muted); margin-bottom: .5rem; }
+
+nav.links { margin-top: .8rem; display: flex; gap: 1.2rem; flex-wrap: wrap; }
